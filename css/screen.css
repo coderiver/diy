@@ -74,6 +74,7 @@ body { min-height: 100%; position: relative; }
 .g2 { width: 40%; height: 236px; float: left; }
 
 .gbig { height: 490px; float: left; width: 40%; }
+.gbig video { width: 100%; }
 
 .g3, .g4 { width: 20%; float: left; }
 
