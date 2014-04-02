@@ -9,7 +9,7 @@
 
 
 $(document).ready(function() {
-
+	b = $('body');
 
 	// clicking nav
 	$('.nav a, .gnav a').click(function(event) {
@@ -18,16 +18,32 @@ $(document).ready(function() {
 		return false;
 	});
 	function goto(n, time){
-		$('.nav a').removeClass('is-active');
-		$('.nav a:nth-child('+n+')').addClass('is-active');
-		slide = $('#slide'+n);
-		  $('html, body').animate({
-	        scrollTop: slide.offset().top
-	    }, time);
-		if(n==2){$('.manifestlink').addClass('is-active')}
-		else{$('.manifestlink').removeClass('is-active')}
-		if(n==9){$('.programlink').addClass('is-active')}
-		else{$('.programlink').removeClass('is-active')}
+			
+		
+			if(!(b.hasClass('is-running'))){
+				b.addClass('is-running');
+				$('.nav a').removeClass('is-active');
+				$('.nav a:nth-child('+n+')').addClass('is-active');
+				slide = $('#slide'+n);
+				  $('html, body').animate({
+			        scrollTop: slide.offset().top
+			    }, time, function() {
+				    b.removeClass('is-running');
+				  });
+				//hilite nav
+				if(n==2){$('.manifestlink').addClass('is-active')}
+				else{$('.manifestlink').removeClass('is-active')}
+				if(n==9){$('.programlink').addClass('is-active')}
+				else{$('.programlink').removeClass('is-active')}
+			}
+		else{
+			console.log('cant run');
+		}
+		// }
+		// clearTimeout(scrollId);
+		// 	scrollId = setTimeout(function(){					
+		// 		isScrolling = false;
+		// 	}, 100);
 	}
 	function next(){
 		cur = $('.nav .is-active').data('slide');
@@ -43,8 +59,8 @@ $(document).ready(function() {
 			goto(cur-1,500)
 		}
 	}
-	prevv = _.debounce(prev, 100, true)
-	nextt = _.debounce(next, 100, true)
+	prevv = _.debounce(prev, 60, true)
+	nextt = _.debounce(next, 60, true)
 	// on rezize stick to slide
 	$(window).resize(function(event) {
 		gotoslide = $('nav .is-active').data('slide');
