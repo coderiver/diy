@@ -24,7 +24,10 @@ $(document).ready(function() {
 		  $('html, body').animate({
 	        scrollTop: slide.offset().top
 	    }, time);
-		
+		if(n==2){$('.manifestlink').addClass('is-active')}
+		else{$('.manifestlink').removeClass('is-active')}
+		if(n==9){$('.programlink').addClass('is-active')}
+		else{$('.programlink').removeClass('is-active')}
 	}
 	function next(){
 		cur = $('.nav .is-active').data('slide');

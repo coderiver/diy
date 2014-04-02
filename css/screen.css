@@ -34,11 +34,14 @@ body { min-height: 100%; position: relative; }
 .sidebar .logo { display: inline-block; background: url('../img/icons-se53cf4fb1c.png') 0 -104px no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; }
 .sidebar .gnav { list-style: none; text-transform: uppercase; }
 .sidebar .gnav li { margin-bottom: 43px; }
-.sidebar .gnav a { color: #020303; font-weight: bold; text-decoration: none; }
+.sidebar .gnav a { color: #020303; font-weight: bold; text-decoration: none; width: 90px; text-align: center; display: block; margin: 0 auto; padding-bottom: 3px; border-bottom: 4px solid white; }
+.sidebar .gnav a:hover { color: #2c8674; }
+.sidebar .gnav a.is-active { color: #2c8674; border-bottom: 4px solid #2c8674; }
 
 .nav { position: fixed; left: 175px; top: 10px; z-index: 20; top: 170px; z-index: 200; margin-left: -200px; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 .is-bottom .nav { margin-left: 0; }
 .nav a, .nav span { display: block; width: 7px; height: 7px; background: #c5c5c5; margin-bottom: 21px; border-radius: 7px; font: 0/0 a; text-shadow: none; color: transparent; cursor: pointer; }
+.nav a:first-child, .nav span:first-child { display: none; }
 .nav a.is-active, .nav a.cycle-pager-active, .nav span.is-active, .nav span.cycle-pager-active { background: #2c8675; }
 
 .slides { position: absolute; bottom: 0; right: 0; top: 0; left: 145px; }
