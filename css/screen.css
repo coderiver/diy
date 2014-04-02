@@ -29,9 +29,9 @@ body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
 body { min-height: 100%; position: relative; }
 
 .sidebar { width: 144px; position: fixed; left: 0; top: 0; bottom: 0; background: white; border-right: 1px solid #cecece; text-align: center; padding-top: 34px; }
-.sidebar .sidebar__fb { position: absolute; bottom: 50px; left: 56px; background: url('../img/icons-se53cf4fb1c.png') 0 -186px no-repeat; width: 31px; height: 31px; }
-.sidebar .sidebar__fb:hover { background-position: 0 -227px; }
-.sidebar .logo { display: inline-block; background: url('../img/icons-se53cf4fb1c.png') 0 -104px no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; }
+.sidebar .sidebar__fb { position: absolute; bottom: 50px; left: 56px; background: url('../img/icons-s9d143e8c0b.png') 0 -470px no-repeat; width: 31px; height: 31px; }
+.sidebar .sidebar__fb:hover { background-position: 0 -511px; }
+.sidebar .logo { display: inline-block; background: url('../img/icons-s9d143e8c0b.png') 0 -175px no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; }
 .sidebar .gnav { list-style: none; text-transform: uppercase; }
 .sidebar .gnav li { margin-bottom: 43px; }
 .sidebar .gnav a { color: #020303; font-weight: bold; text-decoration: none; width: 90px; text-align: center; display: block; margin: 0 auto; padding-bottom: 3px; border-bottom: 4px solid white; }
@@ -54,7 +54,10 @@ body { min-height: 100%; position: relative; }
 
 .manifest { position: absolute; top: 50%; left: 50%; margin: -195px 0 0 -180px; }
 .manifest .manifest__fb, .manifest .manifest__vk { position: absolute; bottom: 3px; left: 50%; width: 62px; height: 62px; left: 178px; }
-.manifest .manifest__fb { left: 108px; }
+.manifest .manifest__fb { left: 108px; background: url('../img/icons-s9d143e8c0b.png') 0 -399px no-repeat; width: 60px; height: 61px; }
+.manifest .manifest__fb:hover { background-position: 0 -104px; }
+.manifest .manifest__vk { background: url('../img/icons-s9d143e8c0b.png') 0 -257px no-repeat; width: 60px; height: 61px; }
+.manifest .manifest__vk:hover { background-position: 0 -328px; }
 
 .cols { width: 80%; margin: 0 auto; font-size: 16px; color: black; padding-top: 100px; }
 .cols p { margin-bottom: 0.6em; }
