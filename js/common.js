@@ -71,8 +71,8 @@ $(document).ready(function() {
 			goto(cur-1,500)
 		}
 	}
-	prevv = _.debounce(prev, 1000, true)
-	nextt = _.debounce(next, 1000, true)
+	prevv = _.debounce(prev, 100, true)
+	nextt = _.debounce(next, 100, true)
 	// on rezize stick to slide
 	$(window).resize(function(event) {
 		gotoslide = $('nav .is-active').data('slide');
