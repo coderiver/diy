@@ -40,6 +40,11 @@ body
 	z-index: 20 
 	top: 170px 
 	z-index: 200 
+	margin-left: -200px 
+	+transition(all .3s ease-in-out)
+	.is-bottom &
+		margin-left: 0
+		 
 	a,span
 		display: block
 		width: 7px 

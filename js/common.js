@@ -51,10 +51,7 @@ $(document).ready(function() {
 
 	var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
 
-	// function scrollme(){
-	// 	console.log('aaa');
-	// }
-	// $('body').bind(mousewheelevt, $.debounce(1000, scrollme ));
+
 	$('body').bind(mousewheelevt, function(e){
 
 	    var evt = window.event || e //equalize event object     
@@ -68,5 +65,15 @@ $(document).ready(function() {
 	        nextt();
 	    }   
 	    return false;
+	});
+
+	$(window).scroll(function(event) {
+		//console.log($(window).scrollTop()+'==='+$(window).height());
+		if($(window).scrollTop()>($(window).height()-100)){
+			$('body').addClass('is-bottom')
+		}
+		else{
+			$('body').removeClass('is-bottom')
+		}
 	});
 });
