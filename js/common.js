@@ -10,40 +10,9 @@
 
 $(document).ready(function() {
 
-	_.debounce = function(func, wait, immediate) {
-    var timeout, args, context, timestamp, result;
 
-    var later = function() {
-      var last = _.now() - timestamp;
-      if (last < wait) {
-        timeout = setTimeout(later, wait - last);
-      } else {
-        timeout = null;
-        if (!immediate) {
-          result = func.apply(context, args);
-          context = args = null;
-        }
-      }
-    };
-
-    return function() {
-      context = this;
-      args = arguments;
-      timestamp = _.now();
-      var callNow = immediate && !timeout;
-      if (!timeout) {
-        timeout = setTimeout(later, wait);
-      }
-      if (callNow) {
-        result = func.apply(context, args);
-        context = args = null;
-      }
-
-      return result;
-    };
-  };
 	// clicking nav
-	$('.nav a').click(function(event) {
+	$('.nav a, .gnav a').click(function(event) {
 		gotoslide = $(this).data('slide');
 		goto(gotoslide,500);
 		return false;
@@ -59,7 +28,7 @@ $(document).ready(function() {
 	}
 	function next(){
 		cur = $('.nav .is-active').data('slide');
-		if(cur<7){
+		if(cur<9){
 			console.log(cur);
 			goto(cur+1,500)
 		}

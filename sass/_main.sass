@@ -12,6 +12,13 @@ body
 	border-right: 1px solid #CECECE 
 	text-align: center
 	padding-top: 34px 
+	.sidebar__fb
+		position: absolute
+		bottom: 50px 
+		left: 56px 
+		+s(fb)
+		&:hover
+			+sp(fbh)
 	.logo
 		display: inline-block
 		+s(logo)
@@ -60,3 +67,40 @@ body
 		+cover
 	&.slide_full
 		background-size: contain 
+.slide
+	position: relative
+.manifest
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: -195px 0 0 -180px
+	.manifest__fb,.manifest__vk
+		position: absolute
+		bottom: 3px
+		left: 50%
+		width: 62px  
+		height: 62px 
+		left: 178px 
+	.manifest__fb
+		left: 108px 
+		 
+.cols
+	width: 80%
+	margin: 0 auto
+	font-size: 16px 
+	color: #000000
+	padding-top: 100px 
+	p
+		margin-bottom:  .6em
+	h3
+		font-size: 24px 
+		font-weight: bold
+		color: #008E7C
+		text-transform: uppercase
+		margin-bottom: 1em  
+	.col
+		float: left 
+		width: 45%
+	.col+.col 
+		float: right
+		width: 45% 

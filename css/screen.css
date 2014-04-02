@@ -29,6 +29,8 @@ body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
 body { min-height: 100%; position: relative; }
 
 .sidebar { width: 144px; position: fixed; left: 0; top: 0; bottom: 0; background: white; border-right: 1px solid #cecece; text-align: center; padding-top: 34px; }
+.sidebar .sidebar__fb { position: absolute; bottom: 50px; left: 56px; background: url('../img/icons-s41a0bfc330.png') 0 -82px no-repeat; width: 31px; height: 31px; }
+.sidebar .sidebar__fb:hover { background-position: 0 -123px; }
 .sidebar .logo { display: inline-block; background: url('../img/icons-s41a0bfc330.png') 0 0 no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; }
 .sidebar .gnav { list-style: none; text-transform: uppercase; }
 .sidebar .gnav li { margin-bottom: 43px; }
@@ -43,3 +45,15 @@ body { min-height: 100%; position: relative; }
 .slide { height: 100%; width: 100%; background: white; background-repeat: no-repeat; background-position: 50% 50%; }
 .slide.slide_cover { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .slide.slide_full { background-size: contain; }
+
+.slide { position: relative; }
+
+.manifest { position: absolute; top: 50%; left: 50%; margin: -195px 0 0 -180px; }
+.manifest .manifest__fb, .manifest .manifest__vk { position: absolute; bottom: 3px; left: 50%; width: 62px; height: 62px; left: 178px; }
+.manifest .manifest__fb { left: 108px; }
+
+.cols { width: 80%; margin: 0 auto; font-size: 16px; color: black; padding-top: 100px; }
+.cols p { margin-bottom: 0.6em; }
+.cols h3 { font-size: 24px; font-weight: bold; color: #008e7c; text-transform: uppercase; margin-bottom: 1em; }
+.cols .col { float: left; width: 45%; }
+.cols .col + .col { float: right; width: 45%; }
