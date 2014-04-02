@@ -104,3 +104,99 @@ body
 	.col+.col 
 		float: right
 		width: 45% 
+
+.start
+	width: 100%
+	overflow: hidden 
+.green
+	background: #008D7C 
+.g1
+	width: 20%
+	height: 236px 
+	float: left
+.g2
+	width: 40%
+	height: 236px 
+	float: left
+.gbig
+	height: 490px 
+	float: left
+	width: 40% 
+.g3,.g4
+	width: 20%
+	float: left
+.g3
+	height: 236px
+	margin-bottom: 2px 
+.g4
+	height: 252px 
+.glogo
+	float: left
+	width: 40%
+	position: relative
+	height: 490px 
+	.glogospan
+		height: 236px 
+	.glogo_1,.glogo_2
+		width: 50%
+		float: left
+		height: 254px  
+	img
+		position: absolute
+		left: 52px 
+		top: 38px 
+		width: 80% 
+		display: block
+.green
+	&:before
+		position: absolute
+		right: 0  
+		width: 2px 
+		background: #fff 
+		height: 100%
+		top: 0
+		bottom: 0  
+		content: ' '
+		z-index: 200 
+	&:after
+		position: absolute
+		bottom: 0  
+		height: 2px 
+		background: #fff 
+		left: 0
+		right: 0  
+		content: ' '
+		z-index: 200 
+.zoom
+	overflow: hidden
+	position: relative
+	&:before
+		position: absolute
+		right: 0  
+		width: 2px 
+		background: #fff 
+		height: 100%
+		top: 0
+		bottom: 0  
+		content: ' '
+		z-index: 200 
+	&:after
+		position: absolute
+		bottom: 0  
+		height: 2px 
+		background: #fff 
+		left: 0
+		right: 0  
+		content: ' '
+		z-index: 200 
+	&:hover
+		div
+			+transform(scale(1.2))
+	div
+		+transition(all .6s linear)
+		+cover
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%   
+		height: 100% 
