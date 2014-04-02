@@ -28,7 +28,7 @@ body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
 
 body { min-height: 100%; position: relative; }
 
-.sidebar { width: 145px; position: fixed; left: 0; top: 0; bottom: 0; background: white; border-right: 1px solid #cecece; text-align: center; padding-top: 34px; }
+.sidebar { width: 144px; position: fixed; left: 0; top: 0; bottom: 0; background: white; border-right: 1px solid #cecece; text-align: center; padding-top: 34px; }
 .sidebar .logo { display: inline-block; background: url('../img/icons-s41a0bfc330.png') 0 0 no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; }
 .sidebar .gnav { list-style: none; text-transform: uppercase; }
 .sidebar .gnav li { margin-bottom: 43px; }
