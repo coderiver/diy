@@ -108,7 +108,15 @@ body
 		+s(vk1)
 		&:hover
 			+sp(vk1h)
-		 
+.wide
+	display: block
+	position: relative
+	+max-screen(1400)
+		display: none
+.narrow
+	display: none
+	+max-screen(1400)
+		display: block
 .cols
 	width: 80%
 	margin: 0 auto
@@ -135,6 +143,7 @@ body
 	overflow: hidden 
 .green
 	background: #008D7C 
+	position: relative
 .g1
 	width: 20%
 	height: 236px 

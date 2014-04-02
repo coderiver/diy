@@ -59,6 +59,12 @@ body { min-height: 100%; position: relative; }
 .manifest .manifest__vk { background: url('../img/icons-s9d143e8c0b.png') 0 -257px no-repeat; width: 60px; height: 61px; }
 .manifest .manifest__vk:hover { background-position: 0 -328px; }
 
+.wide { display: block; position: relative; }
+@media screen and (max-width: 1400px) { .wide { display: none; } }
+
+.narrow { display: none; }
+@media screen and (max-width: 1400px) { .narrow { display: block; } }
+
 .cols { width: 80%; margin: 0 auto; font-size: 16px; color: black; padding-top: 100px; }
 .cols p { margin-bottom: 0.6em; }
 .cols h3 { font-size: 24px; font-weight: bold; color: #008e7c; text-transform: uppercase; margin-bottom: 1em; }
@@ -67,7 +73,7 @@ body { min-height: 100%; position: relative; }
 
 .start { width: 100%; overflow: hidden; }
 
-.green { background: #008d7c; }
+.green { background: #008d7c; position: relative; }
 
 .g1 { width: 20%; height: 236px; float: left; }
 
