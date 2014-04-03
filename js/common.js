@@ -10,6 +10,7 @@
 
 $(document).ready(function() {
 	b = $('body');
+	$("html, body").animate({ scrollTop: 0 }, 100);
 
 	// clicking nav
 	$('.nav a, .gnav a').click(function(event) {
@@ -17,6 +18,7 @@ $(document).ready(function() {
 		goto(gotoslide,500);
 		return false;
 	});
+	var n = 0;
 	function goto(n, time){
 			
 		
@@ -25,6 +27,8 @@ $(document).ready(function() {
 				b.addClass('is-running');
 				$('.nav a').removeClass('is-active');
 				$('.nav a:nth-child('+n+')').addClass('is-active');
+				console.log(n);
+				if(!n){n = 0;}
 				slide = $('#slide'+n);
 				  $('html, body').animate({
 			        scrollTop: slide.offset().top
@@ -32,7 +36,7 @@ $(document).ready(function() {
 				    //b.removeClass('is-running');
 				  });
 				//hilite nav
-				setTimeout(function(){b.removeClass('is-running');},1500);
+				setTimeout(function(){b.removeClass('is-running');},1000);
 				if(n==2){$('.manifestlink').addClass('is-active')}
 				else{$('.manifestlink').removeClass('is-active')}
 				if(n==9){$('.programlink').addClass('is-active')}
@@ -95,7 +99,8 @@ $(document).ready(function() {
 
 	$(window).scroll(function(event) {
 		//console.log($(window).scrollTop()+'==='+$(window).height());
-		if($(window).scrollTop()>($(window).height()-100)){
+		if($(window).scrollTop()>($(window).height()-100) && 
+			$(window).scrollTop()<$('#slide9').offset().top-100){
 			$('body').addClass('is-bottom')
 		}
 		else{
