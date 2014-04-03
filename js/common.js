@@ -21,6 +21,7 @@ $(document).ready(function() {
 			
 		
 			if(!(b.hasClass('is-running'))){
+				console.log('go');
 				b.addClass('is-running');
 				$('.nav a').removeClass('is-active');
 				$('.nav a:nth-child('+n+')').addClass('is-active');
@@ -28,9 +29,10 @@ $(document).ready(function() {
 				  $('html, body').animate({
 			        scrollTop: slide.offset().top
 			    }, time, function() {
-				    b.removeClass('is-running');
+				    //b.removeClass('is-running');
 				  });
 				//hilite nav
+				setTimeout(function(){b.removeClass('is-running');},1500);
 				if(n==2){$('.manifestlink').addClass('is-active')}
 				else{$('.manifestlink').removeClass('is-active')}
 				if(n==9){$('.programlink').addClass('is-active')}
@@ -69,21 +71,26 @@ $(document).ready(function() {
 
 
 	var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
-
+	
 
 	$('body').bind(mousewheelevt, function(e){
+		
+		
+	    
 
-	    var evt = window.event || e //equalize event object     
-	    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
-	    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+		    var evt = window.event || e //equalize event object     
+		    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+		    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
 
-	    if(delta > 0) {
-	        prevv();
-	    }
-	    else{
-	        nextt();
-	    }   
-	    return false;
+		    if(delta > 0) {
+		        prev();
+		    }
+		    else{
+		        next();
+		    }   
+		    return false;
+		
+
 	});
 
 	$(window).scroll(function(event) {
