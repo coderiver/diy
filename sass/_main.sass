@@ -2,7 +2,7 @@
 body
 	min-height: 100%
 	position: relative 
-	min-width: 1100px 
+	min-width: 1000px 
 .sidebar
 	width: 144px 
 	position: fixed
@@ -140,115 +140,15 @@ body
 .start
 	width: 100%
 	overflow: hidden 
-.green
-	background: #008D7C 
-	position: relative
-// .row
-// 	font-size: 0 
-.g1
-	width: 20%
-	height: 236px 
-	float: left
-	+min-screen(1400)
-		width: 16.6%
-.g2
-	width: 40%
-	height: 236px 
-	float: left
-	+min-screen(1400)
-		width: 33.2% 
-.gbig
-	height: 490px 
-	float: left
-	width: 40% 
-	+min-screen(1400)
-		width: 33.2%
-	video
-		width: 100%
-		 
-.g3,.g4
-	width: 20%
-	float: left
-	+min-screen(1400)
-		width: 16.6%
-.g3
-	height: 236px
-	margin-bottom: 2px 
-.g4
-	height: 252px 
-.wide
-	display: none
-	+min-screen(1400)
-		display: block
-.narrow
-	display: block
-	+min-screen(1400)
-		display: none 
-.glogo
-	float: left
-	width: 40%
-	+min-screen(1400)
-		width: 33.2%
-	position: relative
-	height: 490px 
-	.glogospan
-		height: 236px 
-	.glogo_1,.glogo_2
-		width: 50%
-		float: left
-		height: 254px  
-	img
-		position: absolute
-		left: 52px 
-		top: 38px 
-		width: 80% 
-		display: block
-.green
-	border-bottom: 2px solid #fff 
-	overflow: visible
-	position: relative
-	&:before
-		position: absolute
-		right: 0  
-		width: 2px 
-		background: #fff 
-		height: 100%
-		top: 0
-		bottom: 0  
-		content: ' '
-		z-index: 200 
-	&:after
-		position: absolute
-		bottom: 0  
-		height: 2px 
-		background: #fff 
-		left: 0
-		right: 0  
-		content: ' '
-		z-index: 250 
-		width: 100% 
+
+video
+	width: 100%
+	
+.rowrow *
+	+gpu
 .zoom
 	overflow: hidden
 	position: relative
-	&:before
-		position: absolute
-		right: 0  
-		width: 2px 
-		background: #fff 
-		height: 100%
-		top: 0
-		bottom: 0  
-		content: ' '
-		z-index: 200 
-	&:after
-		position: absolute
-		bottom: 0  
-		height: 2px 
-		background: #fff 
-		left: 0
-		right: 0  
-		content: ' '
-		z-index: 200 
 	&:hover
 		div
 			+transform(scale(1.2))
@@ -264,6 +164,7 @@ body
 	float: left
 	background: green 
 	position: relative
+	overflow: hidden
 	&:before
 		position: absolute
 		right: 0  
@@ -324,4 +225,14 @@ body
 .w50
 	width: 50%
 	height: 0
-	padding-bottom: 50%      
+	padding-bottom: 50%    
+.wh
+	background: #fff
+.gr
+	background: #008D7C  
+.logo
+	img
+		width: 80%
+		display: block
+		margin-left: 10%   
+		margin-top: 10% 
