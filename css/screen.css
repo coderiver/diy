@@ -41,7 +41,7 @@ body { min-height: 100%; position: relative; min-width: 1000px; }
 .nav { position: fixed; left: 175px; top: 10px; z-index: 20; top: 170px; z-index: 200; margin-left: -200px; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 .is-bottom .nav { margin-left: 0; }
 .nav a, .nav span { display: block; width: 7px; height: 7px; background: #c5c5c5; margin-bottom: 21px; border-radius: 7px; font: 0/0 a; text-shadow: none; color: transparent; cursor: pointer; }
-.nav a:first-child, .nav span:first-child { display: none; }
+.nav a:first-child, .nav a:last-child, .nav span:first-child, .nav span:last-child { display: none; }
 .nav a.is-active, .nav a.cycle-pager-active, .nav span.is-active, .nav span.cycle-pager-active { background: #2c8675; }
 
 .slides { position: absolute; bottom: 0; right: 0; top: 0; left: 145px; }
