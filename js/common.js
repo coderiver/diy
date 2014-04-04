@@ -107,4 +107,8 @@ $(document).ready(function() {
 			$('body').removeClass('is-bottom')
 		}
 	});
+
+	$('.logo').click(function(event) {
+		goto(1,500)
+	});
 });

@@ -31,7 +31,7 @@ body { min-height: 100%; position: relative; min-width: 1100px; }
 .sidebar { width: 144px; position: fixed; left: 0; top: 0; bottom: 0; background: white; border-right: 1px solid #cecece; text-align: center; padding-top: 34px; }
 .sidebar .sidebar__fb { position: absolute; bottom: 50px; left: 56px; background: url('../img/icons-s9d143e8c0b.png') 0 -470px no-repeat; width: 31px; height: 31px; }
 .sidebar .sidebar__fb:hover { background-position: 0 -511px; }
-.sidebar .logo { display: inline-block; background: url('../img/icons-s9d143e8c0b.png') 0 -175px no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; }
+.sidebar .logo { display: inline-block; background: url('../img/icons-s9d143e8c0b.png') 0 -175px no-repeat; width: 72px; height: 72px; font: 0/0 a; text-shadow: none; color: transparent; margin-bottom: 55px; cursor: pointer; }
 .sidebar .gnav { list-style: none; text-transform: uppercase; }
 .sidebar .gnav li { margin-bottom: 43px; }
 .sidebar .gnav a { color: #020303; font-weight: bold; text-decoration: none; width: 90px; text-align: center; display: block; margin: 0 auto; padding-bottom: 3px; border-bottom: 4px solid white; }
@@ -109,3 +109,20 @@ body { min-height: 100%; position: relative; min-width: 1100px; }
 .zoom:after { position: absolute; bottom: 0; height: 2px; background: white; left: 0; right: 0; content: " "; z-index: 200; }
 .zoom:hover div { -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
 .zoom div { -webkit-transition: all 0.6s linear; -moz-transition: all 0.6s linear; -o-transition: all 0.6s linear; transition: all 0.6s linear; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.g { float: left; background: green; position: relative; }
+.g:before { position: absolute; right: 0; width: 2px; background: white; height: 100%; top: 0; bottom: 0; content: " "; z-index: 200; }
+.g:after { position: absolute; bottom: 0; height: 2px; background: white; left: 0; right: 0; content: " "; z-index: 200; }
+
+.rowrow { width: 100%; max-width: 1300px; position: relative; *zoom: 1; }
+.rowrow:after { content: " "; display: table; clear: both; }
+
+.out { margin-right: -100%; }
+
+.out1 { position: absolute; top: 0; left: 100%; margin-right: 0; background: red; }
+
+.w1 { width: 20%; height: 0; padding-bottom: 20%; }
+
+.w2 { width: 40%; height: 0; padding-bottom: 20%; }
+
+.w2.h2 { width: 40%; height: 0; padding-bottom: 40%; }
